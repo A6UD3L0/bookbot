@@ -1,6 +1,5 @@
 
-from stats import count_words, count_characters  
-
+from stats import count_words, count_characters , create_report
 
 def read_book(file_path): 
     with open(file_path) as f: 
@@ -15,7 +14,8 @@ def main(file_path):
     print(word_count)
     character_dict=count_characters(text_content)
     print(character_dict)
-
+    report=create_report(file_path, word_count, character_dict)
+    print(report)
 
 path_fr="books/frankenstein.txt"
 

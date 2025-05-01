@@ -12,4 +12,9 @@ def count_characters(text_content):
             character_dict[char] = 1
     return character_dict
 
-
+def create_report(book_path,word_count,character_dict):
+    character_dict_sorted=character_dict.sort(reverse=True, key=sort_on)
+    nice_word_count=f"Found {word_count} total words" 
+    report= book_path + nice_word_count + character_dict_sorted
+    return report 
+    
